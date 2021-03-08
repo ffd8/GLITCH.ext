@@ -1,0 +1,49 @@
+{
+	"manifest_version": 2,
+	"name": "GLITCH.ext",
+	"author": "Ted Davis",
+	"version": "0.0.0.1",
+	"background": { "scripts": ["background.js"],  "persistent": false },
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["assets/js/p5.min.js", "assets/js/html2canvas.min.js", "assets/js/p5.glitch.js", "content.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"assets/cursors/glitch_hand_0.png",
+		"assets/cursors/glitch_hand_1.png",
+		"assets/cursors/glitch_hand_2.png",
+		"assets/cursors/glitch_hand_3.png",
+		"assets/cursors/glitch_hand_4.png",
+		"assets/cursors/glitch_hand_5.png",
+		"assets/cursors/glitch_hand_6.png",
+		"assets/images/glitch_bg_0.gif",
+		"assets/fonts/robotomono-regular-webfont.woff2",
+		"assets/fonts/robotomono-regular-webfont.woff",
+		"assets/fonts/robotomono-light-webfont.woff2",
+		"assets/fonts/robotomono-light-webfont.woff"
+	],
+	"icons": {
+		"16": "assets/icons/glitch_hand_5_16.png",
+		"32": "assets/icons/glitch_hand_5_32.png",
+		"48": "assets/icons/glitch_hand_5_48.png",
+		"128": "assets/icons/glitch_hand_5_128.png"
+
+	},
+	"browser_action": {
+		"default_title": "GLITCH.ext",
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "assets/icons/glitch_hand_5_16.png",
+			"32": "assets/icons/glitch_hand_5_32.png",
+			"48": "assets/icons/glitch_hand_5_48.png",
+			"128": "assets/icons/glitch_hand_5_128.png"
+		}
+	},
+	"permissions":  [
+		"storage"
+	]
+}

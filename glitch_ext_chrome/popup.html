@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GLITCH.ext</title>
+	<style>
+		@font-face {
+		  font-family: 'roboto_mono';
+		  src: url('assets/fonts/robotomono-regular-webfont.woff2') format('woff2'),
+		  url('assets/fonts/robotomono-regular-webfont.woff') format('woff');
+		  font-weight: 400;
+		  font-style: bold;
+		}
+		@font-face {
+		  font-family: 'roboto_mono';
+		  src: url('assets/fonts/robotomono-light-webfont.woff2') format('woff2'),
+		  url('assets/fonts/robotomono-light-webfont.woff') format('woff');
+		  font-weight: 200;
+		  font-style: normal;
+		}
+		body{
+			width:175px;
+			height:275px;
+			background:rgb(250, 250, 150);
+			background-image:url('assets/images/glitch_bg_1.gif');
+			background-repeat: no-repeat;
+			background-position: center bottom;
+    		background-size: cover;
+		}
+		*{
+			font-family:'roboto_mono', sans-serif;
+			font-weight:200;
+			outline:none;
+			cursor:url('assets/cursors/glitch_hand_5.png'), default !important;
+		}
+		input:hover, select:hover, button:hover{
+			cursor:url('assets/cursors/glitch_hand_4.png'), default !important;
+		}
+		.subhead{
+			font-size:14pt;
+			border-top:2px solid #000;
+			border-bottom:2px solid #000;
+		}
+		#nav{
+			margin-top:10px;
+			font-size:12pt;
+		}
+		.nav-item, .nav-item-info{
+			display:flex;
+			align-items:flex-end;
+			border-top:1px solid #000;
+			padding:5px 0 5px 0;
+		}
+		.nav-item:hover{
+			background:rgb(250, 250, 200);
+		}
+		.info-header{
+			font-weight:400;
+		}
+		.info-label{
+			flex-grow:1;
+		}
+		.info{
+			font-size:8pt;
+			color:#888;
+
+		}
+		#glitch_reset{
+
+		}
+		.checkbox{
+			width:50px;
+		}
+		#glitch-format{
+			font-size:8pt;
+			min-width:50px;
+			padding:1px;
+			border:1px solid #888;
+			border-radius: 10px;
+			background:none;
+			background-image:url('assets/images/glitch_bg_gray5.gif');
+			background-position: center bottom;
+			background-size: cover;
+
+		}
+		#glitch-format option{
+			padding:0;
+		}
+		.nav-setting{
+			width:75px;
+		}
+
+		/* checkboxes */
+		.glitch-switch {
+			position: relative;
+			display: inline-block;
+			width: 30px;
+			height: 16px;
+			margin:0;
+			margin-bottom:2px;
+		}
+
+		/* Hide default HTML checkbox */
+		.glitch-switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		/* The slider */
+		.glitch-slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			background-image:url('assets/images/glitch_bg_gray2.gif');
+			background-position: center bottom;
+			background-size: cover;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+		.glitch-slider-save{
+			background-image:url('assets/images/glitch_bg_gray4.gif');
+		}
+
+		.glitch-slider:before {
+			position: absolute;
+			content: "";
+			height: 12px;
+			width: 12px;
+			left: 0px;
+			bottom: 0px;
+			background-color: #ff2828;
+			-webkit-transition: .4s;
+			transition: .4s;
+			border:1px solid #000;
+		}
+
+		input:checked + .glitch-slider {
+		}
+
+		input:focus + .glitch-slider {
+			box-shadow: 0 0 1px #2196F3;
+		}
+
+		input:checked + .glitch-slider:before {
+			-webkit-transform: translateX(14px);
+			-ms-transform: translateX(14px);
+			transform: translateX(14px);
+			background-color: #14B4AF;
+		}
+
+		/* Rounded sliders */
+		.glitch-slider.round, #glitch-nav svg, .glitch-slider.round, #glitch-nav-m svg{
+			border-radius: 16px;
+			border:2px solid #333;
+		}
+
+		.glitch-slider.round:before {
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
+
+		#glitch-refresh{
+			padding:0 !important;
+			margin:0 !important;
+			width: 30px;
+			height: 16px;
+			background-image:url('assets/images/glitch_bg_gray3.gif');
+			background-position: center bottom;
+			background-size: cover;
+			border-radius: 16px;
+			border:2px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<div class="nav-item" data-title="Activate GLITCH.ext">
+			<div class="info-label">
+				<span class="info-header">GLITCH</span>
+			</div>
+			<div class="nav-setting">
+				<label class="glitch-switch">
+				<input type="checkbox" class="checkbox" id="glitch-toggle" checked>
+				<span class="glitch-slider round"></span>
+				</label>
+			</div>
+		</div>
+
+		<div class="nav-item" data-title="Clear glitches">
+			<div class="info-label">
+				<span class="info-header">REFRESH</span>
+			</div>
+			<div class="nav-setting">
+				<span title="RESET"><svg id="glitch-refresh" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rewind"><polygon points="11 19 2 12 11 5 11 19"></polygon><polygon points="22 19 13 12 22 5 22 19"></polygon></svg></span>
+			</div>
+		</div>
+
+		<div class="nav-item" data-title="Image type for glitches">
+			<div class="info-label">
+				<span class="info-header">FORMAT</span>
+			</div>
+			<div class="nav-setting">
+				<select id="glitch-format">
+
+				</select>
+			</div>
+		</div>
+
+		<div class="nav-item" data-title="Toggle hyperlinks<br>OFF = glitch EVERYTHING!">
+			<div class="info-label">
+				<span class="info-header">LINKS</span>
+			</div>
+			<div class="nav-setting">
+				<label class="glitch-switch">
+				<input type="checkbox" class="checkbox" id="glitch-links" checked>
+				<span class="glitch-slider glitch-slider-save round"></span>
+				</label>
+			</div>
+		</div>
+
+
+		<div class="nav-item" data-title="<i>2nd mouse click</i><br>OFF = toggles glitch<br>ON  = downloads glitch">
+			<div class="info-label">
+				<span class="info-header">SAVE</span>
+			</div>
+			<div class="nav-setting">
+				<label class="glitch-switch">
+				<input type="checkbox" class="checkbox" id="glitch-download" checked>
+				<span class="glitch-slider glitch-slider-save round"></span>
+				</label>
+			</div>
+		</div>
+
+
+		<div class="nav-item-info" data-title="GLITCH.ext">
+			<div class="info">
+				<span id="info-credits">
+					GLITCH.ext
+				</span>
+				<span id="info-details">
+
+				</span>
+			</div>
+		</div>
+
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>
