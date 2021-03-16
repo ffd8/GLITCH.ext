@@ -8,7 +8,7 @@ for their [Net Works, 09.03 – 13.04.21](https://www.hek.ch/en/program/events-e
 
 -----
 ### *what is happening?!*  
-This extension injects 3 libraries ([p5.js](https://p5js.org/), [p5.glitch](https://p5.glitch.me/), [html2canvas](http://html2canvas.hertzen.com/)) + [custom code](glitch_ext_chrome/) into websites while browsing,  
+This injects 3 libraries ([p5.js](https://p5js.org/), [p5.glitch](https://p5.glitch.me/), [html2canvas](http://html2canvas.hertzen.com/)) + [custom code](glitch_ext_chrome/) into websites while browsing,  
 enabling you to glitch ANY\* element on ANY\* website... *\*almost*
  
 -----
