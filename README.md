@@ -27,7 +27,7 @@ I suggest this technique, so you can inspect the code and know what you're insta
 ##### Webstore
 This technique is nice and easy, but you have to trust me (which you can.. but shouldn't).
 
-- visit GLITCH.ext on [chrome webstore](https://chrome.google.com/webstore/detail/glitchext/ngngpnbcdhonkblmjkognhhdmhkjjhaf?hl=en)
+- visit [GLITCH.ext](https://chrome.google.com/webstore/detail/glitchext/ngngpnbcdhonkblmjkognhhdmhkjjhaf?hl=en) in the Chrome Webstore
 - click 'Add to Chrome' 
 - select extensions icon (upper right) and pin GLITCH.ext
 - enjoy glitching the web! 
