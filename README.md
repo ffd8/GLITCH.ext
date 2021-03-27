@@ -25,7 +25,7 @@ I suggest this technique, so you can inspect the code and know what you're insta
 - enjoy glitching the web! 
 
 ##### Webstore
-This technique is nice and easy, but you have to trust me (which you can.. but shouldn't).
+This technique is nice and easy, but less transparent.
 
 - visit [GLITCH.ext](https://chrome.google.com/webstore/detail/glitchext/ngngpnbcdhonkblmjkognhhdmhkjjhaf?hl=en) in the Chrome Webstore
 - click 'Add to Chrome' 
