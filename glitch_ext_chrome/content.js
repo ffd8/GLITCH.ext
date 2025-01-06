@@ -1,5 +1,5 @@
 // // GLITCH.ext
-// // teddavis.org 2021
+// // teddavis.org 2021 - 2025 - 
 
 // // this is the code which will be injected into a given page...
 function genCursor(setIcon = false){

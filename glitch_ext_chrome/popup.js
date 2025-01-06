@@ -1,5 +1,5 @@
 // GLITCH.ext
-// teddavis.org 2021
+// teddavis.org 2021 - 2025 - 
 
 let settings = [
 	{
